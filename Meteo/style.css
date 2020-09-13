@@ -1,0 +1,98 @@
+body {
+	width: 100%;
+	height: 100%;
+	background-image: url('images/fog.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+}
+
+
+.ville {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #edf2fa;
+	opacity: 0.9;
+	background: linear-gradient(145deg, #1e4057, #193649);
+	box-shadow:  18px 18px 36px #142c3b, 
+             -18px -18px 36px #244c67;
+}
+
+.ciel {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #edf2fa;
+	background: linear-gradient(145deg, #518d9e, #447785);
+	box-shadow:  18px 18px 36px #3b6773, 
+             -18px -18px 36px #5da1b5;
+}
+
+.temperature {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #edf2fa;
+	background: linear-gradient(145deg, #709ab7, #5f829a);
+	box-shadow:  18px 18px 36px #4d697d, 
+             -18px -18px 36px #85b7d9;
+}
+
+.humidite {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #edf2fa;
+	background: linear-gradient(145deg, #a7cae7, #8caac2);
+	box-shadow:  18px 18px 36px #728a9e, 
+             -18px -18px 36px #c6f0ff;
+}
+
+.vent {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #1c3c51;
+	background: linear-gradient(145deg, #dbeeff, #b9c8d7);
+	box-shadow:  18px 18px 36px #96a2ae, 
+             -18px -18px 36px #ffffff;
+}
+
+.card-body {
+	display: flex;
+	justify-content:space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	margin:auto;
+	
+}
+
+.col-6 {
+	height: 20vh;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+
+.test {
+	font-size: 20px;
+	color: #1c3c51;
+}
