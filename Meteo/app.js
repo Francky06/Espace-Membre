@@ -1,4 +1,4 @@
-const APIKEY = '2aa2b3a1ab6322f12b928747bebe4a2d';
+const APIKEY = '';
 
 
 function apiCall(city) {
