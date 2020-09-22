@@ -9,7 +9,7 @@ include "database.php";
 			$_POST= array_map('trim',$_POST);
 					extract($_POST,EXTR_SKIP);
 
-			//verif 
+			//verif A REFAIRE
 			$verif = $bdd->prepare("SELECT * FROM users WHERE email=? AND password =?");
 			$verif->execute(array($mail,$password));
 			$utilisateur = $verif->rowCount();
