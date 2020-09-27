@@ -1,0 +1,57 @@
+
+
+body,html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+
+}
+
+.card {
+	width: 50%;
+}
+
+.formm{
+	padding-left: 10px;
+}
+
+.bulleflex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.bulle {
+	width: 250px;
+	border-radius: 20%;
+	text-align: center;
+}
+
+.container {
+	margin-top: 3rem; 
+	padding:0;
+	min-width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.banner{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: lightblue;
+}
+
+.banner video{
+
+	width: 50%;
+	height: 50%;
+	object-fit: cover;
+	
+}
+
