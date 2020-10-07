@@ -3,9 +3,6 @@
 
 <?php require_once '_partials/_errors.php'  ?> 
 
-
-
-
 		<div class="card" style="margin-top: 5rem;">
 		  <div class="card-body">
 		    <form method="POST">

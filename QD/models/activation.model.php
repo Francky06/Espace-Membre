@@ -21,8 +21,7 @@ function active_compte ($pseudo, $token) {
 			exit;
 		}
 
-
-		
+	
 	}
 
 }

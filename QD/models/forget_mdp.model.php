@@ -1,6 +1,5 @@
 <?php  
 
-
 function forget_mdp($email) {
 	global $errors;
 	$bdd=getbdd();
