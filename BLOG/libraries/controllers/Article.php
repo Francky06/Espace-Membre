@@ -1,15 +1,11 @@
 <?php
 namespace Controllers;
 require_once 'libraries/utils.php';
-require_once 'libraries/models/Article.php';
-require_once 'libraries/models/Comment.php';
+require_once 'libraries/autoload.php';
 
-class Article {
+class Article extends Controller {
 
-    protected $model;
-    public function __construct() {
-        $this->model = new \Modeles\Article();
-    }
+   protected $modelName = \Modeles\Article::class;
 
     public function index() {
    
@@ -52,8 +48,8 @@ class Article {
         if (!$article) {
             die("L'article $id n'existe pas, vous ne pouvez donc pas le supprimer !");
         }
-        $model->delete($id);
+        $this->model->delete($id);
         redirect('index.php');
-            }
+        }
 
     }

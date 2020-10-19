@@ -1,15 +1,15 @@
 <?php
 namespace Modeles;
-require_once ('libraries/database.php');
+
 
     abstract class Model {
         protected $pdo;
         protected $table;
         public function __construct(){
-        $this->pdo = getPdo();
+        $this->pdo = \Database::getPdo();
     }
 
-     public function find(int $id) {
+        public function find(int $id) {
         $query = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE id = :id");
         $query->execute(['id' => $id]);
         $item = $query->fetch();
@@ -22,7 +22,7 @@ require_once ('libraries/database.php');
     }
 
 
-     public function findAll(?string $order=""){
+        public function findAll(?string $order=""){
         $resultats = "SELECT * FROM {$this->table}";
         if($order){
             $resultats .=" ORDER BY " . $order;
