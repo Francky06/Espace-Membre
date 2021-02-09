@@ -1,0 +1,17 @@
+{
+  "name": "francky/new_blog_poo",
+  "authors": [
+    {
+      "name": "Francky06",
+      "email": "ffroswell@gmx.fr"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Router\\": "routes/",
+      "App\\": "app/",
+      "Database\\": "database/"
+    }
+  },
+  "require": {}
+}
