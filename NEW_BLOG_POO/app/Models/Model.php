@@ -47,7 +47,7 @@ abstract class Model {
         $stmt = $this->db->getPDO()->$method($sql);
         $stmt->setFetchMode(PDO::FETCH_CLASS, get_class($this), [$this->db]);
 
-        if($method === 'query') {
+        if($method === 'requete') {
             return $stmt->$fetch();
         } else {
             $stmt->execute($param);
@@ -59,7 +59,7 @@ abstract class Model {
         $sqlPartie = "";
         $i = 1;
         foreach ($data as $key => $value) {
-            $virgule = $i === count($data) ? " " : ', ';
+            $virgule = $i === count($data) ? "" : ', ';
             $sqlPartie .= "{$key} = :{$key}{$virgule}";
             $i++;
         }
@@ -68,5 +68,20 @@ abstract class Model {
 
     }
 
-  
+
+    public function create($data, ?array $relations = null) {
+            $f = "";
+            $f2 = "";
+            $i= 1;
+
+        foreach ($data as $key => $value) {
+            $virgule = $i === count($data) ? "" : ", ";
+            $f .= "{$key}{$virgule}";
+            $f2 .= ":{$key}{$virgule}";
+            $i++;
+        }
+           return $this->requete("INSERT INTO {$this->table} ($f) VALUES ($f2)", $data);
+        }
 }
+
+  

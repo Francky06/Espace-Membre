@@ -1,5 +1,6 @@
 <h1>Admin</h1>
 
+<a href="../admin/posts/create" class="btn btn-success my-3">Créer un article</a>
 
 <table class="table">
     <thead>

@@ -45,7 +45,20 @@ HTML;
         if($result) {
             return true;
         }
+
+    } 
+
+
+    public function create($data, ?array $relations = null) {
+        parent::create($data);
+        $id = $this->db->getPDO()->lastInsertId();
         
-        
+        foreach ($relations as $tagId) {
+            $stmt = $this->db->getPDO()->prepare("INSERT post_tag (post_id, tag_id) VALUE (?,?)");
+            $stmt->execute([$id, $tagId]);
+        }
+        return true;
     }
+
 }
+  

@@ -26,7 +26,7 @@ class PostController extends Controller {
     public function edit($id) {
         $post = (new Post($this->getDB()))->findById($id);
         $tags = (new Tag($this->getDB()))->getAll();
-        return $this->view('admin.post.edit', compact('post', 'tags'));
+        return $this->view('admin.post.form', compact('post', 'tags'));
     }
 
     public function update($id) {
@@ -38,6 +38,23 @@ class PostController extends Controller {
             return header('Location: http://localhost/NEW_BLOG_POO/admin/posts');
         }
     }
+
+        public function create() {
+            $tags = (new Tag($this->getDB()))->getAll();
+
+            return $this->view('admin.post.form', compact('tags'));
+        }
+
+
+        public function createPost() {
+            $post = (new Post($this->getDB()));
+            $tags = array_pop($_POST);
+            $result = $post->create($_POST, $tags);
+
+            if($result) {
+                return header('Location: http://localhost/NEW_BLOG_POO/admin/posts');
+            }
+        }
 
     
 }
